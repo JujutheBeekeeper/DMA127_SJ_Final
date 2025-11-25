@@ -135,7 +135,7 @@ public class DialogueManager : MonoBehaviour
                 GameEventsManager.instance.dialogueEvents.DisplayDialogue(dialogueLine, story.currentChoices);
             }
 
-            
+
         }
         else if (story.currentChoices.Count == 0)
         {
@@ -150,7 +150,7 @@ public class DialogueManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         yield return null;
-        
+
         Debug.Log("Exiting Dialogue");
 
         dialoguePlaying = false;

@@ -12,7 +12,7 @@ public class TimeManager : MonoBehaviour
     [Header("UI (TextMeshPro)")]
     public TextMeshProUGUI timeText; // Drag your TMP Text here
 
-    public event System.Action<int, string> OnHourChanged;
+    //public event System.Action<int, string> OnHourChanged;
 
 
     private void Awake()
@@ -31,7 +31,7 @@ public class TimeManager : MonoBehaviour
         {
             time -= amount;
             UpdateUI();
-            TriggerHourEvent();
+            //TriggerHourEvent();
             return true;
         }
         return false;
@@ -44,7 +44,7 @@ public class TimeManager : MonoBehaviour
     {
         time += amount;
         UpdateUI();
-        TriggerHourEvent();
+        //TriggerHourEvent();
     }
 
     public int GetCurrentHour()
@@ -53,10 +53,10 @@ public class TimeManager : MonoBehaviour
         return hour; // returns 9–21 (9 AM to 9 PM)
     }
 
-    private void TriggerHourEvent()
-    {
-        OnHourChanged?.Invoke(time, ConvertToClock(time));
-    }
+    //private void TriggerHourEvent()
+    //{
+    //    OnHourChanged?.Invoke(time, ConvertToClock(time));
+    //}
 
 
     /// <summary>
