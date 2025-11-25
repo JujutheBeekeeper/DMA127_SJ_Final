@@ -1,0 +1,85 @@
+﻿using System.Collections.Generic;
+using UnityEngine;
+
+public class QuestManager : MonoBehaviour
+{
+    public static QuestManager Instance;
+
+    [Tooltip("Drag all quest assets here")]
+    public List<QuestData> quests;
+
+    private HashSet<string> completedQuests = new HashSet<string>();
+
+    //track quest objects
+    private Dictionary<string, QuestObject> questObjects = new Dictionary<string, QuestObject>();
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+    }
+
+    // Register quest objects at runtime
+    public void RegisterQuestObject(string questId, QuestObject obj)
+    {
+        if (!questObjects.ContainsKey(questId))
+        {
+            questObjects[questId] = obj;
+        }
+    }
+
+    public QuestObject GetQuestObject(string questId)
+    {
+        questObjects.TryGetValue(questId, out var obj);
+        return obj;
+    }
+
+
+    public bool CanStartQuest(QuestData quest)
+    {
+        if (completedQuests.Contains(quest.id)) return false;
+
+        // Check prerequisite
+        if (quest.prerequisiteQuest != null &&
+            !completedQuests.Contains(quest.prerequisiteQuest.id))
+        {
+            return false;
+        }
+
+        // Check both coin and time costs
+        bool hasCoins = CoinManager.Instance.SpendCoins(quest.coinCost);
+        bool hasTime = TimeManager.Instance.SpendTime(quest.timeCost);
+
+        return hasCoins && hasTime;
+    }
+
+
+    public void StartQuest(QuestData quest, Animator questAnimator)
+    {
+        if (CanStartQuest(quest))
+        {
+            completedQuests.Add(quest.id);
+            quest.isCompleted = true;
+
+            if (questAnimator != null)
+                questAnimator.SetTrigger("StartQuest");
+
+            Debug.Log($"Quest {quest.questName} completed!");
+        }
+        else
+        {
+            Debug.Log("Quest cannot be started.");
+        }
+    }
+
+    //ADDING STUFF
+    public QuestData GetQuestById(string questId)
+    {
+        return quests.Find(q => q.id == questId);
+    }
+    //
+
+    public string GetCompletedQuestsSummary()
+    {
+        return "Completed Quests: " + string.Join(", ", completedQuests);
+    }
+}
