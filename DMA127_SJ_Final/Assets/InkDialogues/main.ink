@@ -1,3 +1,3 @@
 EXTERNAL StartQuest(questId)
 
-INCLUDE MakeCubeSpin.ink
+INCLUDE UseToilet.ink
