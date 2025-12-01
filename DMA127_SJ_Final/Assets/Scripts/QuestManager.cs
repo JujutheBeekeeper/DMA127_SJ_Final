@@ -83,6 +83,6 @@ public class QuestManager : MonoBehaviour
 
     public string GetCompletedQuestsSummary()
     {
-        return "Completed Quests: " + string.Join(", ", completedQuests);
+        return "You go to sleep. You have a hard time falling asleep and wake up multiple times during the night. You wake up in the morning, You're tired, and the pain is worse. \r\n\r\nYou feel gross..." + string.Join(", ", completedQuests);
     }
 }
