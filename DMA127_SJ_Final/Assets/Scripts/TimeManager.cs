@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using TMPro; // Import TextMeshPro namespace
 
@@ -11,24 +10,14 @@ public class TimeManager : MonoBehaviour
     [HideInInspector] public int time;
 
     [Header("UI (TextMeshPro)")]
-    public TextMeshProUGUI timeText;
+    public TextMeshProUGUI timeText; 
 
-    public event Action<int> OnHourChanged;
-    private int lastHour;
 
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            time = startingTime;
-            lastHour = GetCurrentHour();
-            UpdateUI();
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (Instance == null) Instance = this;
+        time = startingTime;
+        UpdateUI();
     }
 
     /// <summary>
@@ -40,7 +29,7 @@ public class TimeManager : MonoBehaviour
         {
             time -= amount;
             UpdateUI();
-            CheckHourEvent();
+            //TriggerHourEvent();
             return true;
         }
         return false;
@@ -53,7 +42,7 @@ public class TimeManager : MonoBehaviour
     {
         time += amount;
         UpdateUI();
-        CheckHourEvent();
+        //TriggerHourEvent();
     }
 
     public int GetCurrentHour()
@@ -79,41 +68,16 @@ public class TimeManager : MonoBehaviour
         }
     }
 
-    //private string ConvertToClock(int units)
-    //{
-    //    int hour = GetCurrentHour();
-    //    // Each unit = 1 hour, starting at 9 AM when units = 12
-    //    int hour = 9 + (12 - units); // move forward in hours
-    //    string suffix = (hour >= 12) ? "PM" : "AM";
-
-    //    // Convert to 12-hour format
-    //    int displayHour = (hour > 12) ? hour - 12 : hour;
-
-    //    return $"{displayHour}:00 {suffix}";
-    //}
-
     private string ConvertToClock(int units)
     {
-        int hour = GetCurrentHour();
+        // Each unit = 1 hour, starting at 9 AM when units = 12
+        int hour = 9 + (12 - units); // move forward in hours
         string suffix = (hour >= 12) ? "PM" : "AM";
+
+        // Convert to 12-hour format
         int displayHour = (hour > 12) ? hour - 12 : hour;
+
         return $"{displayHour}:00 {suffix}";
-    }
-
-    private void CheckHourEvent()
-    {
-        int currentHour = GetCurrentHour();
-        if (currentHour != lastHour)
-        {
-            lastHour = currentHour;
-            OnHourChanged?.Invoke(currentHour);
-        }
-
-        // Special case: end of day
-        if (time <= 0)
-        {
-            OnHourChanged?.Invoke(currentHour); // still fires
-        }
     }
 
 }
