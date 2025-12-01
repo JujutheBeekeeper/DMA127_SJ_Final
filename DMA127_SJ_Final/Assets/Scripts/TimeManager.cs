@@ -10,9 +10,7 @@ public class TimeManager : MonoBehaviour
     [HideInInspector] public int time;
 
     [Header("UI (TextMeshPro)")]
-    public TextMeshProUGUI timeText; // Drag your TMP Text here
-
-    //public event System.Action<int, string> OnHourChanged;
+    public TextMeshProUGUI timeText; 
 
 
     private void Awake()
@@ -53,10 +51,10 @@ public class TimeManager : MonoBehaviour
         return hour; // returns 9–21 (9 AM to 9 PM)
     }
 
-    //private void TriggerHourEvent()
-    //{
-    //    OnHourChanged?.Invoke(time, ConvertToClock(time));
-    //}
+    public bool HasTime(int amount)
+    {
+        return time >= amount;
+    }
 
 
     /// <summary>

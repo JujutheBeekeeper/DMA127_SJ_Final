@@ -18,6 +18,9 @@ public class QuestData : ScriptableObject
     [Header("Requirements")]
     public int coinCost;
     public int timeCost;
+
+    public int coinReward; //if any
+
     public QuestData prerequisiteQuest; // drag another QuestData here
 
     [HideInInspector] public bool isCompleted; // runtime only

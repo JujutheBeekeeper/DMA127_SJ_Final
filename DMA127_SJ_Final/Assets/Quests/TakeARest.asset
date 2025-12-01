@@ -18,7 +18,8 @@ MonoBehaviour:
   alwaysAvailable: 1
   availableHourStart: 0
   availableHourEnd: 23
-  coinCost: -3
+  coinCost: 0
   timeCost: 2
+  coinReward: 3
   prerequisiteQuest: {fileID: 0}
   isCompleted: 1

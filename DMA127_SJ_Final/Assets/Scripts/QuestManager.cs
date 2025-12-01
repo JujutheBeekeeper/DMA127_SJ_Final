@@ -12,7 +12,7 @@ public class QuestManager : MonoBehaviour
 
     //track quest objects
     private Dictionary<string, QuestObject> questObjects = new Dictionary<string, QuestObject>();
-
+    
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -38,38 +38,41 @@ public class QuestManager : MonoBehaviour
     {
         if (completedQuests.Contains(quest.id)) return false;
 
-        // Check prerequisite
         if (quest.prerequisiteQuest != null &&
             !completedQuests.Contains(quest.prerequisiteQuest.id))
         {
             return false;
         }
 
-        // Check both coin and time costs
-        bool hasCoins = CoinManager.Instance.SpendCoins(quest.coinCost);
-        bool hasTime = TimeManager.Instance.SpendTime(quest.timeCost);
-
-        return hasCoins && hasTime;
+        // Check affordability
+        return CoinManager.Instance.HasCoins(quest.coinCost) &&
+               TimeManager.Instance.HasTime(quest.timeCost);
     }
-
 
     public void StartQuest(QuestData quest, Animator questAnimator)
     {
         if (CanStartQuest(quest))
         {
+            // Deduct costs
+            CoinManager.Instance.SpendCoins(quest.coinCost);
+            TimeManager.Instance.SpendTime(quest.timeCost);
+
+            // Apply reward if > 0
+            if (quest.coinReward > 0)
+                CoinManager.Instance.AddCoins(quest.coinReward);
+
             completedQuests.Add(quest.id);
             quest.isCompleted = true;
 
-            if (questAnimator != null)
-                questAnimator.SetTrigger("StartQuest");
-
-            Debug.Log($"Quest {quest.questName} completed!");
+            questAnimator?.SetTrigger("StartQuest");
+            Debug.Log($"Quest {quest.questName} completed! Reward: {quest.coinReward} coins");
         }
         else
         {
             Debug.Log("Quest cannot be started.");
         }
     }
+
 
     //ADDING STUFF
     public QuestData GetQuestById(string questId)

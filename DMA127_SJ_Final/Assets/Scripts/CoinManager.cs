@@ -33,6 +33,12 @@ public class CoinManager : MonoBehaviour
         return false;
     }
 
+    public bool HasCoins(int amount)
+    {
+        return coins >= amount;
+    }
+
+
     /// <summary>
     /// Add coins (e.g., rewards).
     /// </summary>
