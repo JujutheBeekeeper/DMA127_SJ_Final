@@ -689,7 +689,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingCoins: 100
   coins: 0
-  coinText: {fileID: 0}
+  coinText: {fileID: 939567119}
 --- !u!1 &426086730 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5902971270548390587, guid: 0381976eeec982c44b0e80f847aa2180,
@@ -945,6 +945,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   quests:
   - {fileID: 11400000, guid: 8edecb94fadadd04aa99bfa5d9d89713, type: 2}
+  - {fileID: 11400000, guid: 08abc6479238a3742a770124d577634f, type: 2}
+  - {fileID: 11400000, guid: 29e4e4fc04a25f94f8652a69634e0c9b, type: 2}
+  - {fileID: 11400000, guid: a582bb0f2dca9634cb30c2ff38ddef3a, type: 2}
+  - {fileID: 11400000, guid: 4f0dbac91ddaa164e9895878a29dbecf, type: 2}
+  - {fileID: 11400000, guid: 564aa662250ccc1498d036bdc36c1546, type: 2}
 --- !u!1 &520628784 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2343651121645041243, guid: 0381976eeec982c44b0e80f847aa2180,
@@ -2135,7 +2140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingTime: 12
   time: 0
-  timeText: {fileID: 0}
+  timeText: {fileID: 1487343745}
 --- !u!4 &998367456 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3667153458677916423, guid: 0381976eeec982c44b0e80f847aa2180,
@@ -2575,11 +2580,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091f857eff4569342a067231b72f7db8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 6
+  speed: 3
   customGravity: 15
-  dialogueManager: {fileID: 0}
+  dialogueManager: {fileID: 1645510687}
   interactDistance: 3
-  crosshair: {fileID: 0}
+  crosshair: {fileID: 326186042}
   defaultColor: {r: 1, g: 1, b: 1, a: 1}
   interactColor: {r: 0.06007115, g: 0.17659669, b: 0.5396226, a: 1}
 --- !u!4 &1372879110
