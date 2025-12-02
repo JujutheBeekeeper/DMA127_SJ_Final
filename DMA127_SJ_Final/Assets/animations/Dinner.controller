@@ -148,7 +148,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Meds
+  m_Name: Dinner
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: StartQuest
@@ -189,7 +189,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Meds
+  m_Name: Dinner
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -203,7 +203,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 50f8db1497c447b44b33d49e072bddbb, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1ce9c55d605e1764a93574614ac4b803, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
