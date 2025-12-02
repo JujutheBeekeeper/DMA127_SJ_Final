@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 16a85bc5019a44a4f8ee19a0c3f739e8
+guid: 06fa56f9d225dda46b4e2f877d5de8e4
 labels:
-- Animation
+- Door
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
   userData: 
-  assetBundleName: 
+  assetBundleName: doors
   assetBundleVariant: 

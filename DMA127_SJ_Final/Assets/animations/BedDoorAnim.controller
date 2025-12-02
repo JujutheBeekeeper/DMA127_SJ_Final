@@ -21,7 +21,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ea965e520406714449b20d4957f23dfc, type: 2}
+  m_Motion: {fileID: 7400000, guid: 6e8a53c8400970b41a3edabfe3fe46f2, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -48,7 +48,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 06fa56f9d225dda46b4e2f877d5de8e4, type: 2}
+  m_Motion: {fileID: 7400000, guid: 5aab71a03dbb708498715815f9722e52, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -60,21 +60,9 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: DoorAnim
+  m_Name: BedDoorAnim
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: OpenClickTrigger
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
-  - m_Name: CloseClickTrigger
-    m_Type: 9
-    m_DefaultFloat: 0
-    m_DefaultInt: 0
-    m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
   - m_Name: Interact
     m_Type: 9
     m_DefaultFloat: 0
@@ -150,10 +138,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.46629214
+  m_TransitionDuration: 1
   m_TransitionOffset: 0.28981295
   m_ExitTime: 0.99217224
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

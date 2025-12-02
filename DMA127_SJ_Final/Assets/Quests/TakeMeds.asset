@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 678f73586eada694c8df8382039465f8, type: 3}
-  m_Name: MakeCubeSpin
+  m_Name: TakeMeds
   m_EditorClassIdentifier: 
-  <id>k__BackingField: MakeCubeSpin
-  questName: We make it spin lol
+  <id>k__BackingField: TakeMeds
+  questName: TakeMeds
   description: 
-  alwaysAvailable: 0
-  availableHourStart: 13
-  availableHourEnd: 13
-  coinCost: 5
-  timeCost: 5
+  alwaysAvailable: 1
+  availableHourStart: 0
+  availableHourEnd: 23
+  coinCost: 1
+  timeCost: 0
   coinReward: 0
   prerequisiteQuest: {fileID: 0}
-  isCompleted: 1
+  isCompleted: 0
