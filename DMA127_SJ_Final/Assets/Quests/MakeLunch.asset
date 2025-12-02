@@ -16,10 +16,10 @@ MonoBehaviour:
   questName: Make Lunch
   description: 
   alwaysAvailable: 0
-  availableHourStart: 4
-  availableHourEnd: 5
+  availableHourStart: 16
+  availableHourEnd: 17
   coinCost: 3
   timeCost: 1
   coinReward: 0
-  prerequisiteQuest: {fileID: 0}
+  prerequisiteQuest: {fileID: 11400000, guid: a582bb0f2dca9634cb30c2ff38ddef3a, type: 2}
   isCompleted: 0

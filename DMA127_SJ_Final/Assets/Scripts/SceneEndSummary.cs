@@ -33,7 +33,7 @@ public class SceneEndSummary : MonoBehaviour
 
     private void HandleHourChanged(int hour)
     {
-        if (hour >= 10) // 9 PM or later
+        if (hour >= 21) // 9 PM or later
         {
             ShowSummary();
         }
