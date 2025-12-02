@@ -356,7 +356,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &172399867
 GameObject:
   m_ObjectHideFlags: 0
@@ -1681,8 +1680,9 @@ RectTransform:
   - {fileID: 326186041}
   - {fileID: 1155768805}
   - {fileID: 873806108}
-  - {fileID: 567507435}
   - {fileID: 704447118}
+  - {fileID: 637581980}
+  - {fileID: 567507435}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1690,6 +1690,103 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &637581979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 637581980}
+  - component: {fileID: 637581983}
+  - component: {fileID: 637581982}
+  - component: {fileID: 637581981}
+  m_Layer: 5
+  m_Name: TransitionAnimations
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &637581980
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637581979}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 573096882}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &637581981
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637581979}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9845e3f502ff3b0409ef33428cb6c26a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &637581982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637581979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &637581983
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637581979}
+  m_CullTransparentMesh: 1
 --- !u!1 &676845561
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,6 +2056,54 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 530406542}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &761373431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761373432}
+  - component: {fileID: 761373433}
+  m_Layer: 0
+  m_Name: SceneController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761373432
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761373431}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.97383857, y: -0.65799195, z: -2.7904923}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &761373433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761373431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a27ed2760ca1b248bcf913f402e9124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transitionAnim: {fileID: 637581981}
+  nextScene: 0
+  currentScene: 1
+  Menu: 0
 --- !u!1 &774485900
 GameObject:
   m_ObjectHideFlags: 0
@@ -2438,7 +2583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &873806108
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2872,7 +3017,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!114 &1270644392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2889,7 +3033,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &1278187098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -774073623374036205, guid: 6dd36f9984aefd5418a08a95f958055e,
@@ -3931,7 +4074,6 @@ MonoBehaviour:
   animator: {fileID: 1804713953}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &1971545599
 GameObject:
   m_ObjectHideFlags: 0
@@ -4273,6 +4415,7 @@ SceneRoots:
   - {fileID: 844894471}
   - {fileID: 1372879110}
   - {fileID: 1971545603}
+  - {fileID: 761373432}
   - {fileID: 1678982970}
   - {fileID: 573096882}
   - {fileID: 1804713954}

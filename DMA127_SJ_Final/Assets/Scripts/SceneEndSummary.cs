@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -41,20 +42,34 @@ public class SceneEndSummary : MonoBehaviour
 
     public void ShowSummary()
     {
-        // Update the text
         if (summaryText != null)
             summaryText.text = QuestManager.Instance.GetCompletedQuestsSummary();
 
-        // Activate the panel
         if (summaryPanel != null)
             summaryPanel.SetActive(true);
 
-        // Show and unlock cursor
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
-        // Disable player input so clicks don’t leak into the 3D world
         if (playerController != null)
             playerController.enabled = false;
+
+        // Start listening for any input
+        StartCoroutine(WaitForAnyInput());
     }
+
+    private IEnumerator WaitForAnyInput()
+    {
+        // Wait half a second before listening
+        yield return new WaitForSeconds(0.5f);
+
+        while (!Input.anyKeyDown)
+        {
+            yield return null;
+        }
+
+        SceneController.instance.BackToMenuAnim();
+    }
+
+
 }

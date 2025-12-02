@@ -9,8 +9,13 @@ public class QuestObject : MonoBehaviour, IInteractable
     [Header("Dialogue (optional)")]
     [SerializeField] private string dialogueKnotName;
 
-    [SerializeField] private AudioSource audioSource;   // Reference to the AudioSource
-    [SerializeField] private AudioClip audioClip;
+    public AudioSource audioSource;
+
+    public void PlaySound()
+    {
+        if (audioSource != null)
+            audioSource.Play();
+    }
 
     //------------------------------------- NEW
     private void Start()
@@ -62,11 +67,6 @@ public class QuestObject : MonoBehaviour, IInteractable
 
         int currentHour = TimeManager.Instance.GetCurrentHour();
         return currentHour >= questData.availableHourStart && currentHour <= questData.availableHourEnd;
-    }
-
-    public void PlayFootstepSound()
-    {
-        audioSource.PlayOneShot(audioClip);
     }
 
 
