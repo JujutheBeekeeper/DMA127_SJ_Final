@@ -488,7 +488,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &172399867
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,6 +535,7 @@ MonoBehaviour:
   summaryText: {fileID: 676845563}
   summaryPanel: {fileID: 704447117}
   playerController: {fileID: 1372879109}
+  summaryHourThreshold: 10
 --- !u!1 &249288996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5675265138718507448, guid: 0381976eeec982c44b0e80f847aa2180,
@@ -3207,7 +3207,6 @@ MonoBehaviour:
   animator: {fileID: 1183996109}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!136 &1093429012
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3469,7 +3468,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!114 &1270644392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3486,7 +3484,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &1278187098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -774073623374036205, guid: 6dd36f9984aefd5418a08a95f958055e,
@@ -3530,7 +3527,6 @@ MonoBehaviour:
   animator: {fileID: 0}
   dialogueKnotName: 
   audioSource: {fileID: 0}
-  audioClip: {fileID: 0}
 --- !u!1 &1314680895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,7 +3797,7 @@ Animator:
   m_GameObject: {fileID: 1382976425}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 06f38d2925211944092d697973bd97ba, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
