@@ -34,6 +34,7 @@ public class SceneController : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+        Debug.Log("We quit the project");
     }
 
     public void BackToMenuAnim()
