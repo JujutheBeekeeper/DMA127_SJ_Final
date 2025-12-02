@@ -22,4 +22,4 @@ MonoBehaviour:
   timeCost: 0
   coinReward: 0
   prerequisiteQuest: {fileID: 0}
-  isCompleted: 0
+  isCompleted: 1
