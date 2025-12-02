@@ -949,6 +949,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8edecb94fadadd04aa99bfa5d9d89713, type: 2}
   - {fileID: 11400000, guid: a582bb0f2dca9634cb30c2ff38ddef3a, type: 2}
   - {fileID: 11400000, guid: 29e4e4fc04a25f94f8652a69634e0c9b, type: 2}
+  - {fileID: 11400000, guid: 0e1404546b0bdac4ab3449bcf13f2f3b, type: 2}
   - {fileID: 11400000, guid: 564aa662250ccc1498d036bdc36c1546, type: 2}
   - {fileID: 11400000, guid: 4f0dbac91ddaa164e9895878a29dbecf, type: 2}
   - {fileID: 11400000, guid: 3a7db60b3b3a84141a92a3229fba42bf, type: 2}
@@ -2468,6 +2469,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1270644392}
+    - targetCorrespondingSourceObject: {fileID: -521122626064382157, guid: 6dd36f9984aefd5418a08a95f958055e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 844894474}
+    - targetCorrespondingSourceObject: {fileID: -521122626064382157, guid: 6dd36f9984aefd5418a08a95f958055e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 844894473}
     - targetCorrespondingSourceObject: {fileID: 2056901520811228412, guid: 6dd36f9984aefd5418a08a95f958055e,
         type: 3}
       insertIndex: -1
@@ -2485,6 +2494,49 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1278187104}
   m_SourcePrefab: {fileID: 100100000, guid: 6dd36f9984aefd5418a08a95f958055e, type: 3}
+--- !u!1 &844894472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -521122626064382157, guid: 6dd36f9984aefd5418a08a95f958055e,
+    type: 3}
+  m_PrefabInstance: {fileID: 844894471}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &844894473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844894472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbea8ec69e93ead43a7bda00776e61c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questData: {fileID: 11400000, guid: 0e1404546b0bdac4ab3449bcf13f2f3b, type: 2}
+  animator: {fileID: 873806109}
+  dialogueKnotName: doHomework
+  audioSource: {fileID: 0}
+--- !u!65 &844894474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844894472}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5162711, y: 0.98474324, z: 1.5153625}
+  m_Center: {x: 0.0051260293, y: 0.50285745, z: 0.000000059604645}
 --- !u!1 &873806107
 GameObject:
   m_ObjectHideFlags: 0
