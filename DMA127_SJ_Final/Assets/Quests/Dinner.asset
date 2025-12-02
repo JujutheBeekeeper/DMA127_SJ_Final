@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <id>k__BackingField: Dinner
   questName: Dinner
-  description: 
+  description: Your stomach hurts, you did not have dinner.
   alwaysAvailable: 0
-  availableHourStart: 22
-  availableHourEnd: 23
+  availableHourStart: 17
+  availableHourEnd: 21
   coinCost: 5
   timeCost: 2
   coinReward: 0
-  prerequisiteQuest: {fileID: 11400000, guid: 564aa662250ccc1498d036bdc36c1546, type: 2}
-  isCompleted: 0
+  prerequisiteQuest: {fileID: 0}
+  isRepeatable: 0
+  isCompleted: 1

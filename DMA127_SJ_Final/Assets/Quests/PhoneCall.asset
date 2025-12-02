@@ -16,10 +16,11 @@ MonoBehaviour:
   questName: 
   description: 
   alwaysAvailable: 1
-  availableHourStart: 0
-  availableHourEnd: 23
+  availableHourStart: 9
+  availableHourEnd: 21
   coinCost: 0
   timeCost: -5
   coinReward: 0
   prerequisiteQuest: {fileID: 0}
+  isRepeatable: 0
   isCompleted: 1

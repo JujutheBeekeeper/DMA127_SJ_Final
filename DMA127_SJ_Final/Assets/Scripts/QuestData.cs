@@ -12,8 +12,8 @@ public class QuestData : ScriptableObject
 
     [Header("Time Availability")]
     public bool alwaysAvailable = true;       // default: quest can be started anytime
-    [Range(0, 23)] public int availableHourStart = 0; // e.g. 9 (9 AM)
-    [Range(0, 23)] public int availableHourEnd = 23;  // e.g. 17 (5 PM)
+    [Range(9, 21)] public int availableHourStart = 0;
+    [Range(9, 21)] public int availableHourEnd = 23;  
 
     [Header("Requirements")]
     public int coinCost;
@@ -22,6 +22,10 @@ public class QuestData : ScriptableObject
     public int coinReward; //if any
 
     public QuestData prerequisiteQuest; // drag another QuestData here
+
+    [Header("Repeatability")]
+    public bool isRepeatable = false;
+
 
     [HideInInspector] public bool isCompleted; // runtime only
 

@@ -22,4 +22,5 @@ MonoBehaviour:
   timeCost: 4
   coinReward: 0
   prerequisiteQuest: {fileID: 0}
+  isRepeatable: 0
   isCompleted: 1

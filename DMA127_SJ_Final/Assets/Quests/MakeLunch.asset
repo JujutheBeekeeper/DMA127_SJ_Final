@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <id>k__BackingField: MakeLunch
   questName: Make Lunch
-  description: 
+  description: You didn't have lunch. You are so so hungry.
   alwaysAvailable: 0
-  availableHourStart: 16
-  availableHourEnd: 17
+  availableHourStart: 13
+  availableHourEnd: 16
   coinCost: 3
   timeCost: 1
   coinReward: 0
-  prerequisiteQuest: {fileID: 11400000, guid: a582bb0f2dca9634cb30c2ff38ddef3a, type: 2}
-  isCompleted: 0
+  prerequisiteQuest: {fileID: 0}
+  isRepeatable: 0
+  isCompleted: 1

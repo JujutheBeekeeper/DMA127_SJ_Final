@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <id>k__BackingField: TakeARest
   questName: Take A Rest
-  description: Interact with the bed to rest and regain some coins
+  description: You didn't nap today. You don't know if that is good or bad.
   alwaysAvailable: 1
-  availableHourStart: 0
-  availableHourEnd: 23
+  availableHourStart: 9
+  availableHourEnd: 21
   coinCost: 0
   timeCost: 2
   coinReward: 3
   prerequisiteQuest: {fileID: 0}
+  isRepeatable: 1
   isCompleted: 1

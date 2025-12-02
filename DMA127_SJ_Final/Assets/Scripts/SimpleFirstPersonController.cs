@@ -71,8 +71,16 @@ public class SimpleFirstPersonController : MonoBehaviour
 
             if (interactable != null)
             {
-                // Check availability before changing crosshair
-                if (interactable.IsAvailable())
+                bool available = interactable.IsAvailable();
+                bool canStart = true;
+
+                QuestObject questObj = interactable as QuestObject;
+                if (questObj != null)
+                {
+                    canStart = QuestManager.Instance.CanStartQuest(questObj.questData);
+                }
+
+                if (available && canStart)
                 {
                     if (crosshair != null)
                         crosshair.color = interactColor;
@@ -84,13 +92,14 @@ public class SimpleFirstPersonController : MonoBehaviour
                 }
                 else
                 {
-                    // Not available → keep default color
+                    // Not available or cannot start → default color, no interaction
                     if (crosshair != null)
                         crosshair.color = defaultColor;
                 }
 
-                return; // stop here so we don’t reset the crosshair again
+                return;
             }
+
         }
 
         // No interactable hit → reset to default

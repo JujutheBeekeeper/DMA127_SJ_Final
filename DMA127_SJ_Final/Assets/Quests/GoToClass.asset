@@ -14,12 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <id>k__BackingField: GoToClass
   questName: Go to class
-  description: 
+  description: You get an email from your professor, they say you're close to failing
+    due to the number of absences.
   alwaysAvailable: 0
-  availableHourStart: 5
-  availableHourEnd: 6
+  availableHourStart: 13
+  availableHourEnd: 15
   coinCost: 5
   timeCost: 2
   coinReward: 0
   prerequisiteQuest: {fileID: 0}
-  isCompleted: 0
+  isRepeatable: 0
+  isCompleted: 1

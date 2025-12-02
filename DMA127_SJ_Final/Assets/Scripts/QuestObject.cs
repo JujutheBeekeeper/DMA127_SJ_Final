@@ -66,6 +66,10 @@ public class QuestObject : MonoBehaviour, IInteractable
         if (questData.alwaysAvailable) return true;
 
         int currentHour = TimeManager.Instance.GetCurrentHour();
+
+        int startHour = questData.availableHourStart;
+        int endHour = questData.availableHourEnd;
+
         return currentHour >= questData.availableHourStart && currentHour <= questData.availableHourEnd;
     }
 

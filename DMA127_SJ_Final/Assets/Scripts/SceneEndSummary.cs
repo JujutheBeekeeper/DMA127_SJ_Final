@@ -10,7 +10,9 @@ public class SceneEndSummary : MonoBehaviour
     [SerializeField] private GameObject summaryPanel;       // Panel container (set in Inspector)
 
     [Header("Player Controller")]
-    [SerializeField] private SimpleFirstPersonController playerController; // drag your player here
+    [SerializeField] private SimpleFirstPersonController playerController;
+
+    [SerializeField] private int summaryHourThreshold = 10;
 
     private void Start()
     {
@@ -33,10 +35,16 @@ public class SceneEndSummary : MonoBehaviour
 
     private void HandleHourChanged(int hour)
     {
-        if (hour >= 21) // 9 PM or later
+        if (hour >= summaryHourThreshold) // 9 PM or later
         {
-            ShowSummary();
+            StartCoroutine(DelayedShowSummary()); 
         }
+    }
+
+    private IEnumerator DelayedShowSummary()
+    {
+        yield return new WaitForSeconds(5f);
+        ShowSummary();
     }
 
 
