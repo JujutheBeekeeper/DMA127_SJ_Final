@@ -972,7 +972,7 @@ PrefabInstance:
     - target: {fileID: 5750071002252434883, guid: 32bae8a1fd357b0489ac2af39c992bc6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.5
+      value: 1.41
       objectReference: {fileID: 0}
     - target: {fileID: 5750071002252434883, guid: 32bae8a1fd357b0489ac2af39c992bc6,
         type: 3}
@@ -996,6 +996,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1916887505}
+    - targetCorrespondingSourceObject: {fileID: 6989972652074480914, guid: 32bae8a1fd357b0489ac2af39c992bc6,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1916887508}
   m_SourcePrefab: {fileID: 100100000, guid: 32bae8a1fd357b0489ac2af39c992bc6, type: 3}
 --- !u!1001 &530406542
 PrefabInstance:
@@ -3406,6 +3410,23 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.26028386, y: 5.3962655, z: 2.3156953}
   m_Center: {x: -0.008874382, y: -0.1600157, z: -0.0000003223677}
+--- !u!114 &1916887508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916887503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbea8ec69e93ead43a7bda00776e61c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questData: {fileID: 11400000, guid: 24ec055aa55037a47a7393e6f0b69f83, type: 2}
+  animator: {fileID: 1804713953}
+  dialogueKnotName: 
+  audioSource: {fileID: 0}
+  audioClip: {fileID: 0}
 --- !u!1 &1971545599
 GameObject:
   m_ObjectHideFlags: 0
