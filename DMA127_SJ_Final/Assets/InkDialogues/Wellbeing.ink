@@ -11,9 +11,9 @@ Maybe I should take a nap
 === takeMeds ===
 I need to take my medicine
 *[Yes (1 energy)]
-    I sure need it
+    // I sure need it
     ~ StartQuest("TakeMeds")
 
 *[No]
-    It'll be fine...
+    // It'll be fine...
 - -> END

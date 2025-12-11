@@ -39,6 +39,8 @@ public class DialogueManager : MonoBehaviour
             GameEventsManager.instance.dialogueEvents.onEnterDialogue += EnterDialogue;
             //here he also subscribes to the input to enable or disable, we'll see about what that means later
             GameEventsManager.instance.dialogueEvents.onUpdateChoiceIndex += UpdateChoiceIndex;
+            
+            GameEventsManager.instance.dialogueEvents.onRequestContinueDialogue += ContinueDialogue;
         }
         else
         {
@@ -68,8 +70,16 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
+        // If there are choices, don't consume the click — let the UI handle it
+        if (story.currentChoices.Count > 0)
+        {
+            return;
+        }
+
+        // Otherwise, continue the story
         ContinueOrExitStory();
     }
+
 
 
 
@@ -166,4 +176,8 @@ public class DialogueManager : MonoBehaviour
     {
         return dialogueLine.Trim().Equals("") || dialogueLine.Trim().Equals("/n");
     }
+
+    //====================================================================
+
+
 }

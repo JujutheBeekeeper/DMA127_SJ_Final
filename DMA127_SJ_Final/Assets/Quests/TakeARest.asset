@@ -17,7 +17,7 @@ MonoBehaviour:
   description: You didn't nap today. You don't know if that is good or bad.
   alwaysAvailable: 1
   availableHourStart: 9
-  availableHourEnd: 21
+  availableHourEnd: 23
   coinCost: 0
   timeCost: 2
   coinReward: 3
