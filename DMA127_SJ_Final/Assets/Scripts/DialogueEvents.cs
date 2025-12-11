@@ -55,5 +55,13 @@ public class DialogueEvents
         }
     }
 
+    //================================
+    public event Action onRequestContinueDialogue;
+
+    public void RequestContinueDialogue()
+    {
+        onRequestContinueDialogue?.Invoke();
+    }
+
 
 }

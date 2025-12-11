@@ -9,13 +9,13 @@ public class QuestObject : MonoBehaviour, IInteractable
     [Header("Dialogue (optional)")]
     [SerializeField] private string dialogueKnotName;
 
-    public AudioSource audioSource;
+    //public AudioSource audioSource;
 
-    public void PlaySound()
-    {
-        if (audioSource != null)
-            audioSource.Play();
-    }
+    //public void PlaySound()
+    //{
+    //    if (audioSource != null)
+    //        audioSource.Play();
+    //}
 
     //------------------------------------- NEW
     private void Start()

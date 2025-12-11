@@ -12,8 +12,8 @@ public class QuestData : ScriptableObject
 
     [Header("Time Availability")]
     public bool alwaysAvailable = true;       // default: quest can be started anytime
-    [Range(9, 21)] public int availableHourStart = 0;
-    [Range(9, 21)] public int availableHourEnd = 23;  
+    [Range(9, 23)] public int availableHourStart = 0;
+    [Range(9, 23)] public int availableHourEnd = 23;  
 
     [Header("Requirements")]
     public int coinCost;

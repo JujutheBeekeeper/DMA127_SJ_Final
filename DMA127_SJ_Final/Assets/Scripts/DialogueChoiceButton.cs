@@ -5,13 +5,48 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class DialogueChoiceButton : MonoBehaviour, ISelectHandler
+public class DialogueChoiceButton : MonoBehaviour
 {
     [Header("Components")]
     [SerializeField] private Button button;
     [SerializeField] private TextMeshProUGUI choiceText;
 
     private int choiceIndex = -1;
+
+
+    private void Awake()
+    {
+        if (button == null)
+            button = GetComponent<Button>();
+
+        button.onClick.AddListener(OnButtonClicked);
+    }
+
+    private void OnButtonClicked()
+    {
+        Debug.Log("Button clicked! Choice index: " + choiceIndex);
+
+        // Update choice index
+        GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(choiceIndex);
+
+        // Immediately continue the dialogue
+        GameEventsManager.instance.dialogueEvents.RequestContinueDialogue();
+    }
+
+
+    //private void Awake()
+    //{
+    //    if (button != null)
+    //    {
+    //        button.onClick.AddListener(() =>
+    //        {
+    //            Debug.Log("Button clicked! Choice index: " + choiceIndex);
+    //            GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(choiceIndex);
+    //        });
+    //    }
+    //}
+
+
 
     public void SetChoiceText(string choiceTextString)
     {
@@ -23,13 +58,14 @@ public class DialogueChoiceButton : MonoBehaviour, ISelectHandler
         this.choiceIndex = choiceIndex;
     }
 
-    public void SelectButton()
-    {
-        button.Select();
-    }
 
-    public void OnSelect(BaseEventData eventData)
-    {
-        GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(choiceIndex);
-    }
+    //public void SelectButton()
+    //{
+    //    button.Select();
+    //}
+
+    //public void OnSelect(BaseEventData eventData)
+    //{
+    //    GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(choiceIndex);
+    //}
 }

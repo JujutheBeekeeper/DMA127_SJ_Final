@@ -17,7 +17,7 @@ MonoBehaviour:
   description: Your stomach hurts, you did not have dinner.
   alwaysAvailable: 0
   availableHourStart: 17
-  availableHourEnd: 21
+  availableHourEnd: 22
   coinCost: 5
   timeCost: 2
   coinReward: 0
