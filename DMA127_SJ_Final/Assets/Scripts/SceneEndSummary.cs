@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -9,7 +10,9 @@ public class SceneEndSummary : MonoBehaviour
     [SerializeField] private GameObject summaryPanel;       // Panel container (set in Inspector)
 
     [Header("Player Controller")]
-    [SerializeField] private SimpleFirstPersonController playerController; // drag your player here
+    [SerializeField] private SimpleFirstPersonController playerController;
+
+    [SerializeField] private int summaryHourThreshold = 10;
 
     private void Start()
     {
@@ -32,29 +35,49 @@ public class SceneEndSummary : MonoBehaviour
 
     private void HandleHourChanged(int hour)
     {
-        if (hour >= 10) // 9 PM or later
+        if (hour >= summaryHourThreshold) // 9 PM or later
         {
-            ShowSummary();
+            StartCoroutine(DelayedShowSummary()); 
         }
+    }
+
+    private IEnumerator DelayedShowSummary()
+    {
+        yield return new WaitForSeconds(5f);
+        ShowSummary();
     }
 
 
     public void ShowSummary()
     {
-        // Update the text
         if (summaryText != null)
             summaryText.text = QuestManager.Instance.GetCompletedQuestsSummary();
 
-        // Activate the panel
         if (summaryPanel != null)
             summaryPanel.SetActive(true);
 
-        // Show and unlock cursor
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
 
-        // Disable player input so clicks don’t leak into the 3D world
         if (playerController != null)
             playerController.enabled = false;
+
+        // Start listening for any input
+        StartCoroutine(WaitForAnyInput());
     }
+
+    private IEnumerator WaitForAnyInput()
+    {
+        // Wait half a second before listening
+        yield return new WaitForSeconds(0.5f);
+
+        while (!Input.anyKeyDown)
+        {
+            yield return null;
+        }
+
+        SceneController.instance.BackToMenuAnim();
+    }
+
+
 }

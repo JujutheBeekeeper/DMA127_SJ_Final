@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <id>k__BackingField: MakeBreakfast
   questName: MakeBreakfast
-  description: Make Breakfast when you wake up
+  description: You are so so hungry
   alwaysAvailable: 0
-  availableHourStart: 0
-  availableHourEnd: 1
+  availableHourStart: 9
+  availableHourEnd: 11
   coinCost: 2
   timeCost: 1
   coinReward: 0
   prerequisiteQuest: {fileID: 0}
-  isCompleted: 0
+  isRepeatable: 0
+  isCompleted: 1

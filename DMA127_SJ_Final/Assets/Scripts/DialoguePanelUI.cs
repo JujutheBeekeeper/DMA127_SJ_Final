@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Ink.Runtime;
+using UnityEngine.UI;
 
 public class DialoguePanelUI : MonoBehaviour
 {
@@ -87,11 +88,15 @@ public class DialoguePanelUI : MonoBehaviour
             choiceButton.SetChoiceText(dialogueChoice.text);
             choiceButton.SetChoiceIndex(inkChoiceIndex);
 
-            if (inkChoiceIndex == 0)
-            {
-                choiceButton.SelectButton();
-                GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(0);
-            }
+            //if (inkChoiceIndex == 0)
+            //{
+            //    choiceButton.SelectButton();
+            //    GameEventsManager.instance.dialogueEvents.UpdateChoiceIndex(0);
+            //}
+
+            var nav = choiceButton.GetComponent<Button>().navigation;
+            nav.mode = Navigation.Mode.None;
+            choiceButton.GetComponent<Button>().navigation = nav;
 
             choiceButtonIndex--;
         }

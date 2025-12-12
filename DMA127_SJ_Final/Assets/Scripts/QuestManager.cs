@@ -9,6 +9,7 @@ public class QuestManager : MonoBehaviour
     public List<QuestData> quests;
 
     private HashSet<string> completedQuests = new HashSet<string>();
+    private HashSet<string> repeatableQuestsLogged = new HashSet<string>();
 
     //track quest objects
     private Dictionary<string, QuestObject> questObjects = new Dictionary<string, QuestObject>();
@@ -61,8 +62,17 @@ public class QuestManager : MonoBehaviour
             if (quest.coinReward > 0)
                 CoinManager.Instance.AddCoins(quest.coinReward);
 
-            completedQuests.Add(quest.id);
-            quest.isCompleted = true;
+            if (quest.isRepeatable)
+            {
+                // Only log once for summary
+                if (!repeatableQuestsLogged.Contains(quest.id))
+                    repeatableQuestsLogged.Add(quest.id);
+            }
+            else
+            {
+                completedQuests.Add(quest.id);
+                quest.isCompleted = true;
+            }
 
             questAnimator?.SetTrigger("StartQuest");
             Debug.Log($"Quest {quest.questName} completed! Reward: {quest.coinReward} coins");
@@ -83,6 +93,22 @@ public class QuestManager : MonoBehaviour
 
     public string GetCompletedQuestsSummary()
     {
-        return "You go to sleep. You have a hard time falling asleep and wake up multiple times during the night. You wake up in the morning, You're tired, and the pain is worse." + string.Join(", ", completedQuests);
+        // Base narrative text
+        string summary = "You go to sleep. You have a hard time falling asleep and wake up multiple times during the night. " +
+                         "You wake up in the morning, You're tired, and the pain is worse.\n";
+
+        // Add each quest description if not completed
+        foreach (var quest in quests)
+        {
+            bool logged = completedQuests.Contains(quest.id) || repeatableQuestsLogged.Contains(quest.id);
+
+            if (!logged)
+            {
+                summary += quest.description + "\n";
+            }
+        }
+
+        return summary;
     }
+
 }

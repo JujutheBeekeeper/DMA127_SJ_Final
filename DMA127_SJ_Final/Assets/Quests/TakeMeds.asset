@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <id>k__BackingField: TakeMeds
   questName: TakeMeds
-  description: 
+  description: Your head feels funny.
   alwaysAvailable: 1
-  availableHourStart: 0
-  availableHourEnd: 23
+  availableHourStart: 9
+  availableHourEnd: 21
   coinCost: 1
   timeCost: 0
   coinReward: 0
   prerequisiteQuest: {fileID: 0}
+  isRepeatable: 0
   isCompleted: 1
