@@ -24,6 +24,7 @@ public class DialogueManager : MonoBehaviour
 
         InkExternalFunctions inkFunctions = new InkExternalFunctions();
         inkFunctions.Bind(story);
+
     }
 
     public void ContinueDialogue()

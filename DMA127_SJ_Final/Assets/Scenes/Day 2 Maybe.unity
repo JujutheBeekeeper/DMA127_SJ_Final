@@ -2347,7 +2347,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knotName: goToClass
   triggerHour: 11
-  delaySeconds: 3
+  delaySeconds: 7
 --- !u!4 &672933609
 Transform:
   m_ObjectHideFlags: 0
@@ -7166,7 +7166,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2070111379
 RectTransform:
   m_ObjectHideFlags: 0

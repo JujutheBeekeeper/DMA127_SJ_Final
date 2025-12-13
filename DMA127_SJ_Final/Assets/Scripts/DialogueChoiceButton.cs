@@ -31,6 +31,8 @@ public class DialogueChoiceButton : MonoBehaviour
 
         // Immediately continue the dialogue
         GameEventsManager.instance.dialogueEvents.RequestContinueDialogue();
+
+        GameEventsManager.instance.dialogueEvents.DialogueFinished();
     }
 
 
